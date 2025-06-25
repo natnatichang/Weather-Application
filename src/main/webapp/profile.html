@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Assignment - Profile</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+	<!-- Creates dark overlay -->
+ 	<div class="vignette"></div>
+ 	<!-- Header Stuff -->
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="#" id="signOutBtn">Sign Out</a>
+    </div>
+	
+	<!-- Main Content -->
+    <div class="content">
+    	<!-- Table for the search history -->
+        <div class="search-history">
+            <h2><span id="username"></span>'s Search History</h2>
+            <div class="table-container">
+                <table>
+                    <tbody id="historyTableBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    
+		<!-- Weather information display grid if clicked on any of the items-->
+        <div id="weatherDetailsContainer" style="display: none;">
+            <div id="weatherIconsContainer" class="weather-icons-grid">
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/planet-earth.png">
+                    <span id="cityName">--</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/snowflake.png">
+                    <span id="tempLow">--°</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/sun.png">
+                    <span id="tempHigh">--°</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/wind.png">
+                    <span id="windSpeed">-- m/s</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/drop.png">
+                    <span id="humidity">--%</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/LocationIcon.png">
+                    <span id="coordinates">--, --</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/thermometer.png">
+                    <span id="currentTemperature">--°</span>
+                </div>
+                <div class="weather-item">
+                    <img src="Assignment 3 Images/sunrise-icon.png">
+                    <span id="sunriseSunset">--/--</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
+ 

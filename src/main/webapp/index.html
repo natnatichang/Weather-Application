@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Weather Assignment</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+	<!-- Main Background Container -->
+	<div class="background">
+	<!-- Creates dark overlay -->
+		<div class="vignette"></div>
+		
+		<!-- Main Content -->
+		<div class="content">
+			
+			<!-- Header Stuff for Navigation -->
+			<div class="header" id="headerNav">
+				<a href="profile.html" id="profileLink" style="display: none;">Profile</a>
+				<a href="#" id="logoutLink" onclick="logout()">Sign Out</a> 
+				<a href="login.html" id="loginLink">Login</a>
+				<a href="register.html" id="registerLink">Register</a>
+			</div>
+
+			<!-- Shows the weather app image in the center -->
+			<div class="weather-icon">
+				<img src="Assignment 3 Images/logo.png" alt="Weather Icon">
+			</div>
+		
+			<!-- Search functionality-->
+			<div class="search-container">
+				<div class="search-bar" id="searchBarContainer">
+					<input type="text" placeholder="Los Angeles, CA" id="cityInput">
+					<button onclick="fetchWeather()" id="searchButton">
+						<img src="Assignment 3 Images/magnifying_glass.jpeg"
+							style="width: 24px; height: 24px;">
+					</button>
+				</div>
+			</div>
+
+
+			<!-- Search type selection (City or Lat/Long) -->
+			<div class="search-options">
+				<label> <input type="radio" name="searchType" value="city"
+					checked onchange="toggleSearchType()"> City
+				</label> <label> <input type="radio" name="searchType"
+					value="latlong" onchange="toggleSearchType()"> Lat/Long
+				</label>
+			</div>
+
+
+			<!-- Display all results button -->
+			<div class="display-all" id="displayAllContainer">
+				<button onclick="displayAll()">Display All</button>
+			</div>
+
+			 <!-- Weather information display grid -->
+			<div id="weatherIconsContainer" class="weather-icons-grid">
+
+				<div class="weather-item">
+					<img src="Assignment 3 Images/planet-earth.png">
+					<span id="cityName">...</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/snowflake.png">
+					<span id="tempLow">--°</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/sun.png">
+					<span id="tempHigh">--°</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/wind.png"> <span
+						id="windSpeed">-- m/s</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/drop.png"> <span
+						id="humidity">--%</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/LocationIcon.png">
+					<span id="coordinates">--, --</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/thermometer.png"> 
+					<span id="currentTemperature">--°</span>
+				</div>
+				<div class="weather-item">
+					<img src="Assignment 3 Images/sunrise-icon.png"> 
+					<span id="sunriseSunset">--/--</span>
+				</div>
+			</div>
+		
+			 <!-- Cities table container -->
+			<div id="citiesTableContainer" class="cities-table-container"
+				style="display: none;">
+				<div class="table-header">
+					<span>All Cities</span>
+					<div class="sort-by">
+						<label for="sortSelect">Sort by:</label> <select id="sortSelect"
+							class="sort-dropdown">
+							<option value="temp-low-desc">Temp Low DESC</option>
+							<option value="city-name-a-z">City Name A-Z</option>
+							<option value="city-name-z-a">City Name Z-A</option>
+							<option value="temp-low-asc">Temp Low ASC</option>
+							<option value="temp-high-asc">Temp High ASC</option>
+							<option value="temp-high-desc">Temp High DESC</option>
+						</select>
+					</div>
+				</div>
+				
+				<!-- Cities data table -->
+				<table id="citiesTable">
+					<thead>
+						<tr>
+							<th>City Name</th>
+							<th>Temp. Low</th>
+							<th>Temp. High</th>
+						</tr>
+					</thead>
+					<tbody id="citiesTableBody">
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+	</div>
+	
+	 <!-- Map overlay container -->
+	<div class="map-overlay-container" id="mapOverlay">
+		<div class="map-background"></div>
+		<div id="map"></div>
+	</div>
+
+	<script src="index.js"></script>
+	<script
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5hCdqerPGrx0ApjPrLnOJ1UO76Tay6yE"></script>
+</body>
+</html>

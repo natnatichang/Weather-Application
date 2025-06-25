@@ -1,0 +1,245 @@
+/* Base */
+body, html {
+	height: 100%;
+	margin: 0;
+	font-family: 'Avenir Next', Arial;
+}
+
+/* Background yipee */
+.background {
+	background-image: url('Assignment 3 Images/background.jpg');
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	height: 100%;
+	position: relative;
+}
+
+/* Creates that dark overlay over the background  */
+.vignette {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('Assignment 3 Images/Black Vignette.png');
+	background-size: cover;
+}
+
+
+/* Main Content  */
+.content {
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+/* Header Navigation */
+.header {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0);
+	padding: 15px 40px;
+	text-align: right;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+	margin-left: 30px;
+	display: inline-block;
+}
+
+
+/* Weather Icon  */
+.weather-icon {
+	margin-bottom: 20px;
+}
+
+.weather-icon img {
+	width: 200px;
+	height: auto;
+}
+
+
+/* Search Component */
+.search-container {
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.search-bar {
+	position: relative;
+	display: flex;
+	margin-bottom: 10px;
+}
+
+
+.search-bar input {
+	width: 100%;
+	padding: 10px 40px 10px 10px;
+	border: none;
+	border-radius: 5px;
+}
+
+.search-bar button {
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+}
+
+.search-options {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+.search-options label {
+	color: white;
+}
+
+
+
+/* Display All Button */
+.display-all {
+	margin-top: 20px;
+}
+
+.display-all button {
+	padding: 10px 20px;
+	color: white;
+	background-color: rgb(112, 116, 124);
+	border: none;
+	border-radius: 2px;
+}
+
+
+
+/* Cities Table Styles */
+.cities-table-container {
+	display: none;
+	background: rgba(35, 36, 42, 255);
+	backdrop-filter: blur(20px);
+	border-radius: 10px;
+	padding: 20px;
+	margin-top: 20px;
+	width: 100%;
+	max-width: 650px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.table-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 15px;
+	color: white;
+}
+
+sort-container {
+	display: none;
+}
+
+.sort-dropdown select {
+	padding: 6px 12px;
+	border-radius: 6px;
+	background: rgb(128, 128, 128);
+	color: white;
+	border: 1px solid rgb(112, 116, 124);;
+}
+
+
+#citiesTable {
+	width: 100%;
+	border-collapse: collapse;
+	color: white;
+}
+
+#citiesTable th, #citiesTable td {
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#citiesTable th {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Weather Icons Grid Layout */
+.weather-icons-grid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 30px;
+	margin-top: 20px;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 20px;
+	border-radius: 10px;
+	max-width: 800px;
+}
+
+.weather-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+
+.weather-item img {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 5px;
+}
+
+.weather-item span {
+	font-size: 14px;
+	text-align: center;
+}
+
+#weatherIconsContainer {
+    background: transparent;
+}
+
+
+/* Map Overlay */
+.map-overlay-container {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+}
+
+.map-background {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(35, 36, 42, 255);
+}
+
+#map {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	width: 400px;
+	height: 400px;
+}

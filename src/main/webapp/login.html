@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Assignment - Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+	<!-- Creates dark overlay -->
+	<div class="vignette"></div>
+	
+	<!-- Navigation header -->
+    <div class="header">
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+    </div>
+    
+     <!-- Main login container -->
+    <div class="login-container">
+        <img src="Assignment 3 Images/Keychain_Locked@2x.png" class="login-icon">
+        <form id="loginForm">
+        
+    	    <!-- Username input -->
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
+            </div>
+            
+            <!-- Password input -->
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" required>
+            </div>
+            
+             <!-- Error message container -->
+            <div id="errorMessage" class="error-message">
+            </div>
+            
+             <!-- Submit button -->
+            <button type="submit" class="login-button">Login</button>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
