@@ -1,5 +1,5 @@
 # Weather-Application
-This Weather Application provides both web front-end and database backend functionality, allowing users to search for weather data by city name or latitude/longitude coordinates, view detailed weather information, and track search history.
+This Weather Application was developed as a final assignment that demonstrates provides both web front-end and database backend functionality, allowing users to search for weather data by city name or latitude/longitude coordinates, view detailed weather information, and track search history.
 
 # Preview
 [Weather Application](https://natnatichang.github.io/Weather-Application/src/main/webapp/index.html)
