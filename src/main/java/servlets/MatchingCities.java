@@ -52,7 +52,7 @@ public class MatchingCities extends HttpServlet {
             // Create the OpenWeatherMapApi where there is a limit of 5 since we need more than 1 result
             String apiUrl = "https://api.openweathermap.org/data/2.5/find" +
                           "?q=" + URLEncoder.encode(search, "UTF-8") +
-                          "&appid=9825627b80e61786ca64cd58fea15a64" +
+                          "&appid=abf9b861deb6169689cfa0631434d554" +
                           "&units=metric" +
                           "&limit=5";
             

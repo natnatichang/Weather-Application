@@ -49,12 +49,12 @@ public class WeatherResults extends HttpServlet {
 			// If city name is provided, use the first for the query
 			if (city != null && !city.trim().isEmpty()) {
 				apiUrl = "https://api.openweathermap.org/data/2.5/weather" + "?q="
-						+ URLEncoder.encode(city, "UTF-8") + "&appid=9825627b80e61786ca64cd58fea15a64"
+						+ URLEncoder.encode(city, "UTF-8") + "&appid=abf9b861deb6169689cfa0631434d554"
 						+ "&units=metric";
 			} else if (latitude != null && longitude != null && !latitude.trim().isEmpty() && !longitude.trim().isEmpty()) {
 				// If latitude and longitude are provided, use this one instead
 				apiUrl = "https://api.openweathermap.org/data/2.5/weather" + "?lat=" + latitude + "&lon=" + longitude
-						+ "&appid=9825627b80e61786ca64cd58fea15a64" + "&units=metric";
+						+ "&appid=abf9b861deb6169689cfa0631434d554" + "&units=metric";
 			} else {
 				// Set error in JSON instead
 				weatherJson.addProperty("success", false);
